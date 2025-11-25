@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo-MFS-Functionud</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main class="flex justify-center">
+      <div class="mockup-phone">
+        <div class="mockup-phone-camera"></div>
+        <div
+          class="mockup-phone-display text-black grid place-content-center bg-neutral-300"
+        >
+          <!-- Account Balance -->
+          <div class="stats bg-white text-center">
+            <div class="stat">
+              <div class="stat-title">Available Balance</div>
+              <div id="account-balance" class="stat-value">89400</div>
+            </div>
+          </div>
+          <!-- Account Balance -->
+          <div class="divider"></div>
+          <!-- Fatures start -->
+          <div class="flex gap-2">
+            <button
+              id="show-add-money-form"
+              type="button"
+              class="btn btn-lg bg-lime-500"
+            >
+              Add Money
+            </button>
+            <button
+              id="show-cash-out-form"
+              type="button"
+              class="btn btn-lg bg-blue-500"
+            >
+              Cash Out
+            </button>
+            <button
+              id="show-transaction"
+              type="button"
+              class="btn btn-lg bg-amber-500"
+            >
+              Transactions
+            </button>
+          </div>
+          <!-- Fatures end -->
+          <div class="divider"></div>
+          <!--Add money Form start -->
+          <div
+            id="add-money-form"
+            class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="label">Amount</label>
+                <input
+                  id="input-add-money"
+                  type="text"
+                  class="input"
+                  placeholder="Amount"
+                  required
+                />
+                <label class="label">Pin</label>
+                <input
+                  id="input-pin-number"
+                  type="password"
+                  class="input"
+                  placeholder="4-digit pin"
+                />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button
+                  id="btn-add-money"
+                  type="button"
+                  class="btn bg-lime-500 mt-4"
+                >
+                  Add Money
+                </button>
+              </fieldset>
+            </div>
+          </div>
+          <!--Add money Form end -->
+          <!-- Cash out form start -->
+          <div
+            id="cash-out-form"
+            class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl"
+          >
+            <div class="card-body">
+              <fieldset class="fieldset">
+                <label class="label">Cash Out Amount</label>
+                <input
+                  id="input-cash-out"
+                  type="text"
+                  class="input"
+                  placeholder="Amount"
+                  required
+                />
+                <label class="label">Pin</label>
+                <input
+                  id="input-cash-out-pin"
+                  type="password"
+                  class="input"
+                  placeholder="4-digit pin"
+                />
+                <div><a class="link link-hover">Forgot password?</a></div>
+                <button
+                  id="btn-cash-out"
+                  type="button"
+                  class="btn bg-blue-500 mt-4"
+                >
+                  Cash Out
+                </button>
+              </fieldset>
+            </div>
+          </div>
+          <!-- Cash out form end -->
+          <!-- Transaction History Start -->
+          <div id="trx-history" class="hidden">
+            <h2 class="text-5xl text-center">Transaction History</h2>
+          </div>
+          <div id="transaction-container" class="space-y-3"></div>
+          <!-- Transaction History End -->
+        </div>
+      </div>
+    </main>
+    <script src="js/utility2.js"></script>
+    <script src="js/addmoney2.js"></script>
+    <script src="js/cashout.js"></script>
+    <script src="js/features.js"></script>
+  </body>
+</html>
